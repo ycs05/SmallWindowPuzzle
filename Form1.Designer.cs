@@ -72,12 +72,13 @@
             // 
             // IntoNextLevel
             // 
-            IntoNextLevel.Location = new Point(14, 12);
+            IntoNextLevel.Location = new Point(12, 12);
             IntoNextLevel.Name = "IntoNextLevel";
-            IntoNextLevel.Size = new Size(75, 23);
+            IntoNextLevel.Size = new Size(107, 23);
             IntoNextLevel.TabIndex = 3;
             IntoNextLevel.Text = "Into next level";
             IntoNextLevel.UseVisualStyleBackColor = true;
+            IntoNextLevel.Visible = false;
             IntoNextLevel.Click += IntoNextLevelPressed;
             // 
             // Form1

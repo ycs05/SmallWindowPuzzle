@@ -42,6 +42,7 @@ namespace SmallWindowPuzzle
             {
                 Boom.Text = "OHHHHHHHH";
                 Boom.Enabled = false;
+                IntoNextLevel.Show();
             }
         }
 
