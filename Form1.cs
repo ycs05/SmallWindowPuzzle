@@ -61,5 +61,11 @@ namespace SmallWindowPuzzle
             new Form2().Show();
             this.Hide();
         }
+
+        protected override bool ProcessMnemonic(char charCode)
+        {
+            return true;
+        }
+
     }
 }

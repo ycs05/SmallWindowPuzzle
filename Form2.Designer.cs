@@ -32,6 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             notifyIcon1 = new NotifyIcon(components);
             label1 = new Label();
+            maskedTextBox1 = new MaskedTextBox();
+            label2 = new Label();
+            VerifyButton = new Button();
             SuspendLayout();
             // 
             // notifyIcon1
@@ -53,14 +56,51 @@
             label1.TabIndex = 0;
             label1.Text = "There is no anything";
             // 
+            // maskedTextBox1
+            // 
+            maskedTextBox1.AsciiOnly = true;
+            maskedTextBox1.BeepOnError = true;
+            maskedTextBox1.Location = new Point(146, 12);
+            maskedTextBox1.Name = "maskedTextBox1";
+            maskedTextBox1.PasswordChar = '*';
+            maskedTextBox1.Size = new Size(100, 23);
+            maskedTextBox1.TabIndex = 1;
+            maskedTextBox1.Visible = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(12, 15);
+            label2.Name = "label2";
+            label2.Size = new Size(128, 17);
+            label2.TabIndex = 2;
+            label2.Text = "Input the password: ";
+            label2.Visible = false;
+            // 
+            // VerifyButton
+            // 
+            VerifyButton.Location = new Point(252, 12);
+            VerifyButton.Name = "VerifyButton";
+            VerifyButton.Size = new Size(75, 23);
+            VerifyButton.TabIndex = 3;
+            VerifyButton.Text = "Verify";
+            VerifyButton.UseVisualStyleBackColor = true;
+            VerifyButton.Visible = false;
+            VerifyButton.Click += Verify;
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(VerifyButton);
+            Controls.Add(label2);
+            Controls.Add(maskedTextBox1);
             Controls.Add(label1);
             Name = "Form2";
             Text = "Form2";
+            FormClosed += onFormClosed;
+            SizeChanged += sizeChanged;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -69,5 +109,8 @@
 
         private NotifyIcon notifyIcon1;
         private Label label1;
+        private MaskedTextBox maskedTextBox1;
+        private Label label2;
+        private Button VerifyButton;
     }
 }
